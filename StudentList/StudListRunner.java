@@ -2,7 +2,9 @@
 
 public class StudListRunner
 {
-    while(no one's typed anything){
+    String input = "";
+    StudentList studList = new StudentList();
+    While(input = null){
         studList.addStudentToList();
         studList.deleteStudentFromList();
         studList.editStudentList();
