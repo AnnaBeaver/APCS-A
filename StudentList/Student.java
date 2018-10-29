@@ -2,11 +2,12 @@
 public class Student
 {
     //Instance Variables
-    String firstName;
-    String middleName;
-    String lastName;
-    int stuNumber;
-    double gpa;
+    public static String firstName;
+    public static String middleName;
+    public static String lastName;
+    public static String fullName;
+    public static int stuNumber;
+    public static double gpa;
     
     //Setters
     //firstName, middleName, lastName, stuNumber, gpa

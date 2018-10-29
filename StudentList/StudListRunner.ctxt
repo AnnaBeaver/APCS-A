@@ -2,6 +2,4 @@
 comment0.target=StudListRunner
 comment1.params=
 comment1.target=void\ setMenu()
-comment2.params=input
-comment2.target=void\ getMenu(int)
-numComments=3
+numComments=2

@@ -1,13 +1,13 @@
 #BlueJ class context
 comment0.target=StudentList
-comment1.params=
-comment1.target=void\ addStudent()
+comment1.params=input
+comment1.target=void\ addStudent(java.lang.String)
 comment2.params=
 comment2.target=void\ deleteStudent()
 comment3.params=
 comment3.target=void\ editStudentList()
-comment4.params=
-comment4.target=void\ clearList()
+comment4.params=input
+comment4.target=void\ clearList(java.lang.String)
 comment5.params=
 comment5.target=void\ printList()
 comment6.params=
