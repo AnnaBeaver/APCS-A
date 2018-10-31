@@ -24,7 +24,7 @@ public class StudListRunner
                 StudentList.addStudent(input);
             }
             else if(input == "2"){
-                StudentList.deleteStudent();
+                StudentList.deleteStudentFromList();
             }
             else if (input == "3"){
                 StudentList.editStudentList();
@@ -33,7 +33,7 @@ public class StudListRunner
                 StudentList.clearList(input);
             }
             else if (input == "5"){
-                StudentList.printList();
+                StudentList.printStudentList();
             }
             else if (input == "6"){
                 StudentList.printStudent();

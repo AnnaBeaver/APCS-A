@@ -8,7 +8,10 @@ public class Student
     public static String fullName;
     public static int stuNumber;
     public static double gpa;
-    
+    //Constructor
+    public Student(){
+        
+    }
     //Setters
     //firstName, middleName, lastName, stuNumber, gpa
     public void setFullName(String s){
