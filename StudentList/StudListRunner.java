@@ -3,12 +3,12 @@ public class StudListRunner
 {
     //making a student list object
     Student student = new Student();
-    int i = 0;
+    //int i = 0;
     Scanner scanner = new Scanner(System.in);
     String keyboard = scanner.nextLine();
-    static ArrayList <String> FirstName = new ArrayList <String>();
-
+    
     public static void setMenu(){
+        //selection is the variable that holds what number the person wants
         String selection = "0";
         while (!selection.equals("7")){
             //Menu
@@ -23,35 +23,27 @@ public class StudListRunner
             System.out.print("Please type one of the numbers ");
 
             //Takes data from the keyboard and sets it equal to string scanner
+            //this scanner is for the variable selection, and should hold a number between 1 and 7
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             selection = input;
 
             //checks for each of the appropriate values, otherwise returns an error
             if (selection.equals("1")){
-                //prints Adding Student...
-                System.out.println("Adding Student...");
-                System.out.println("What is the student's first name?");
-                Scanner scanner2 = new Scanner(System.in);
-                String input2 = scanner2.nextLine();
-                FirstName.add(input2);
-                System.out.println(FirstName);
-
-                //System.out.println();
+                StudentList.addStudent();
             }
 
             else if(selection.equals("2")){
-
-                //StudentList.deleteStudentFromList();
+                StudentList.deleteStudentFromList();
             }
             else if (selection.equals("3")){
-                //StudentList.editStudentList();
+                StudentList.editStudentList();
             }
             else if (selection.equals("4")){ 
-                //StudentList.clearList(input);
+                StudentList.clearList(input);
             }
             else if (selection.equals("5")){
-                //StudentList.printStudentList();
+                StudentList.printStudentList();
             }
             else if (selection.equals("6")){
                 StudentList.printStudent();

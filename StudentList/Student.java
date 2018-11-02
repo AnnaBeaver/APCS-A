@@ -7,7 +7,7 @@ public class Student
     public static String middleName;
     public static String lastName;
     public static String fullName;
-    public static int stuNumber;
+    public static int studentNumber;
     public static double gpa;
     //Constructor
     public Student(){
@@ -25,7 +25,7 @@ public class Student
         lastName = s;
     }
     public void setStuNumber(int s){
-        stuNumber = s;
+        studentNumber = s;
     }
     public void setgpa(double s){
         gpa = s;
@@ -41,7 +41,7 @@ public class Student
         return lastName;
     }
     public int getStuNumber(){
-        return stuNumber;
+        return studentNumber;
     }
     public double getgpa(){
         return gpa;
