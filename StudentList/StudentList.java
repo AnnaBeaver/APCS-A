@@ -1,17 +1,34 @@
 import java.util.*;
 public class StudentList
 {
-    public static Scanner scanner = new Scanner(System.in);
-    String input = scanner.nextLine();
-    ArrayList <String> Student_List = new ArrayList <String>();
-    public static void addStudent(String input){
+    int x = 1;
+
+    Scanner scanner = new Scanner(System.in);
+    String keyboard = scanner.nextLine();
+    ArrayList <String> FirstName = new ArrayList <String>();
+
+    /*
+    public static String Scanner(){
+    Scanner scanner = new Scanner(System.in);
+    while(true){
+    String keyboard = scanner.nextLine();
+    ArrayList <String> FirstName = new ArrayList <String>();
+    return keyboard;
+    }
+    }
+     */
+
+    public static void addStudent(String keyboard){
+        Scanner scanner = new Scanner(System.in);
         StudentList s1 = new StudentList();
-        System.out.println("Enter Student Name");
-        StudentList.parseUserInput(scanner.nextLine(),Student_List.add);
+        System.out.println("Enter Student First Name");
+        System.out.println(Student.firstName);
+        //StudentList.parseUserInput(input);
     }
 
     public static void deleteStudentFromList(){
-        
+        System.out.println("Please enter name or Student ID of the student you would like to delete");
+
     }
 
     public static void editStudentList(){
@@ -34,8 +51,9 @@ public class StudentList
     }
 
     public static void printStudentList(){
-        System.out.println(Student.fullName);
-
+        System.out.print(Student.fullName + ", ");
+        System.out.print(Student.stuNumber + ", ");
+        System.out.println(Student.gpa);
     }
 
     public static void printStudent(){
@@ -61,7 +79,7 @@ public class StudentList
 
     }
 
-    public static void parseUserInput(String fullName, Student student){
+    public static void parseUserInput(String fullName){
         fullName.indexOf(" ");
         if(fullName.indexOf(",") != -1){
             Student.lastName = fullName.substring(0,fullName.indexOf(", "));
@@ -76,4 +94,9 @@ public class StudentList
             Student.lastName = fullName.substring(fullName.indexOf(" ")+1);
         }
     }
+
+    public static void filterSearchStudentList(){
+
+    }
+
 }

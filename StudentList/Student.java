@@ -1,6 +1,7 @@
 
 public class Student
 {
+    StudentList studentList = new StudentList();
     //Instance Variables
     public static String firstName;
     public static String middleName;

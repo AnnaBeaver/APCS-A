@@ -1,11 +1,14 @@
 #BlueJ class context
 comment0.target=StudentList
-comment1.params=input
+comment1.params=keyboard
 comment1.target=void\ addStudent(java.lang.String)
-comment10.params=fullName\ student
-comment10.target=void\ parseUserInput(java.lang.String,\ Student)
+comment1.text=\n\ \ \ \ public\ static\ String\ Scanner(){\n\ \ \ \ Scanner\ scanner\ \=\ new\ Scanner(System.in);\n\ \ \ \ while(true){\n\ \ \ \ String\ keyboard\ \=\ scanner.nextLine();\n\ \ \ \ ArrayList\ <String>\ FirstName\ \=\ new\ ArrayList\ <String>();\n\ \ \ \ return\ keyboard;\n\ \ \ \ }\n\ \ \ \ }\n
+comment10.params=fullName
+comment10.target=void\ parseUserInput(java.lang.String)
+comment11.params=
+comment11.target=void\ filterSearchStudentList()
 comment2.params=
-comment2.target=void\ deleteStudent()
+comment2.target=void\ deleteStudentFromList()
 comment3.params=
 comment3.target=void\ editStudentList()
 comment4.params=input
@@ -20,4 +23,4 @@ comment8.params=
 comment8.target=void\ clear()
 comment9.params=
 comment9.target=void\ addStudentToList()
-numComments=11
+numComments=12
