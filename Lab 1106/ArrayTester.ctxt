@@ -2,14 +2,13 @@
 comment0.target=ArrayTester
 comment1.params=
 comment1.target=void\ main()
-comment2.params=
-comment2.target=void\ loadArray()
-comment3.params=
-comment3.target=int\ sumAll()
-comment4.params=
-comment4.target=int\ findGreatest()
-comment5.params=
-comment5.target=int\ numberOfGreatest()
-comment6.params=
-comment6.target=double\ findAvg()
-numComments=7
+comment2.params=nums
+comment2.target=int\ sumAll(int[][])
+comment2.text=\n\ \ \ \ public\ static\ void\ loadArray(String\ [][]\ nums){\n\ \ \ \ \ \ \ \ for(int\ y\ \=\ 0;\ y<nums.length;\ y++){\n\ \ \ \ \ \ \ \ \ \ \ \ for\ (int\ x\ \=\ 0;\ x<\ nums[y].length;\ x++){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nums[y][x]\ \=\ (int)(Math.random()*100)+1;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n
+comment3.params=nums
+comment3.target=int\ findGreatest(int[][])
+comment4.params=nums
+comment4.target=int\ numberOfGreatest(int[][])
+comment5.params=nums
+comment5.target=double\ findAvg(int[][])
+numComments=6
