@@ -1,50 +1,24 @@
 import java.util.*;
 public class StudentList
 {
-    //making a student list object
-    Student student = new Student();
-    //int i = 0;
     Scanner scanner = new Scanner(System.in);
     String keyboard = scanner.nextLine();
-
+    
     //makes the Array Lists for all the necesarry variables
     static ArrayList <String> FirstName = new ArrayList <String>();
     static ArrayList <String> MiddleName = new ArrayList <String>();
     static ArrayList <String> LastName = new ArrayList <String>();
     static ArrayList <Integer> StudentID = new ArrayList <Integer>();
     static ArrayList <Double> GPA = new ArrayList <Double>();
+    
+    ArrayList Students = new ArrayList();
 
     public static void addStudent(){
+        Student student = new Student();
         //prints Adding Student...
         System.out.println("Adding Student...");
-
-        //getting the first name
-        System.out.println("What is the student's first name?");
-        //takes keyboard input
-        Scanner scanner2 = new Scanner(System.in);
-        String input2 = scanner2.nextLine();
-        //sets keyboard input to the student's first name
-        FirstName.add(input2);
-        System.out.println(FirstName);
-
-        //getting the middle name
-        System.out.println("What is the student's middle name?");
-        System.out.println("space is an acceptable answer.");
-        //takes keyboard input
-        Scanner scanner3 = new Scanner(System.in);
-        String input3 = scanner3.nextLine();
-        //sets keyboard input to the student's middle name
-        MiddleName.add(input3);
-        System.out.println(MiddleName);
-
-        //getting the last name
-        System.out.println("What is the student's last name?");
-        //takes keyboard input
-        Scanner scanner4 = new Scanner(System.in);
-        String input4 = scanner4.nextLine();
-        //sets keyboard input to the student's last name
-        LastName.add(input4);
-        System.out.println(LastName);
+        
+        Student.FullName();
     }
 
     public static void deleteStudentFromList(){
@@ -63,6 +37,23 @@ public class StudentList
         System.out.println("1.) Name");
         System.out.println("2.) Student ID");
         System.out.println("3.) GPA");
+        
+        //get input from keyboard of what number is entered
+        Scanner scanner2 = new Scanner(System.in);
+        String input2 = scanner2.nextLine();
+        
+        if (input2.equals("1")){
+            System.out.println("Please enter student name");
+            
+        }
+        if (input2.equals("2")){
+            System.out.println("Please enter student ID");
+            
+        }
+        if (input2.equals("2")){
+            System.out.println("Please enter student GPA");
+            
+        }
     }
 
     public static void clearList(String input){
@@ -77,55 +68,12 @@ public class StudentList
         }
             //return to menu
         }
-    
-
-    public static void printStudentList(){
-        System.out.print(Student.fullName + ", ");
-        System.out.print(Student.studentNumber + ", ");
-        System.out.println(Student.gpa);
-    }
-
-    public static void printStudent(){
-        System.out.println(Student.fullName);
-        System.out.println(Student.studentNumber);
-        System.out.println(Student.gpa);
-    }
-
-    public static void search(String name, int num){
-        if (name != null){
-            name = Student.firstName;
-        }
-        if (num != -1){
-            num = Student.studentNumber;
-        }
-    }
-
-    public static void clear(){
-        System.out.println("Enter the name or ID of the student you would like to clear");
-        //get input of the name or student ID of the kid to be deleted
-        Scanner scanner2 = new Scanner(System.in);
-        String input2 = scanner2.nextLine();
-        System.out.println(scanner2 + "has been cleared.");
-    }
-
-    public static void parseUserInput(String fullName){
-        fullName.indexOf(" ");
-        if(fullName.indexOf(",") != -1){
-            Student.lastName = fullName.substring(0,fullName.indexOf(", "));
-            Student.firstName = fullName.substring((fullName.indexOf(", ")),(fullName.indexOf(" ")));
-        }
-        else if((fullName.indexOf( " ") != -1 && (fullName.indexOf(" ") +1) != -1)){
-            Student.firstName = fullName.substring(0,fullName.indexOf(" "));
-            Student.middleName = fullName.substring((fullName.indexOf(" ")+1),(fullName.indexOf (" ")));
-        }
-        else{
-            Student.firstName = fullName.substring(0, fullName.indexOf(" "));
-            Student.lastName = fullName.substring(fullName.indexOf(" ")+1);
-        }
-    }
 
     public static void filterSearchStudentList(){
 
     }
 
+    public static void printStudentList(){
+        
+    }
 }

@@ -2,7 +2,7 @@ import java.util.*;
 public class StudListRunner
 {
     //making a student list object
-    Student student = new Student();
+    //Student student = new Student();
     //int i = 0;
     Scanner scanner = new Scanner(System.in);
     String keyboard = scanner.nextLine();
@@ -46,7 +46,7 @@ public class StudListRunner
                 StudentList.printStudentList();
             }
             else if (selection.equals("6")){
-                StudentList.printStudent();
+                //StudentList.printStudent();
             }
             else if (selection.equals("7")){
                 //Exit
