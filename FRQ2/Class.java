@@ -1,11 +1,13 @@
 import java.util.ArrayList;
 public class Class
 {
-    public Class(){
-       
+    
+    public static void main(){
+        String str = "I like puppies";
+        System.out.println(TransformILike(str));
     }
     
-    public void TransformILike (String str){
+    public static String TransformILike (String str){
         String noun = str.substring(str.indexOf("I like ")+7);
         ArrayList<String> response = new ArrayList<String>();
         response.add("Why do you like ");
@@ -14,7 +16,7 @@ public class Class
         response.add("What color are ");
 
         int responseNum = (int)(Math.random()*4)+1;
-        System.out.println(response.get(responseNum-1)+noun+"?");
-
+        return(response.get(responseNum-1)+noun+"?");
+        
     }
 }
