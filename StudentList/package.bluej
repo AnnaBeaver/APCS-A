@@ -1,12 +1,48 @@
 #BlueJ package file
+<<<<<<< HEAD
 dependency1.from=StudentList
+=======
+dependency1.from=StudListRunner
+<<<<<<< HEAD
+dependency1.to=StudentList
+=======
+>>>>>>> 3be383cb7e979d684afb7b52a7fc5305c2188467
 dependency1.to=Student
+>>>>>>> 3900b93b82c1f512e10cb9c327050165f105d392
 dependency1.type=UsesDependency
-dependency2.from=StudListRunner
-dependency2.to=StudentList
+dependency2.from=StudentList
+dependency2.to=Student
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=0
 editor.fx.0.width=0
+=======
+<<<<<<< HEAD
+editor.fx.0.height=1160
+editor.fx.0.width=1057
+editor.fx.0.x=0
+editor.fx.0.y=0
+objectbench.height=167
+objectbench.width=920
+package.divider.horizontal=0.6
+package.divider.vertical=0.8360037700282752
+package.editor.height=880
+package.editor.width=830
+package.editor.x=759
+package.editor.y=0
+package.frame.height=1160
+package.frame.width=960
+package.numDependencies=2
+=======
+dependency3.from=Student
+dependency3.to=StudentList
+dependency3.type=UsesDependency
+dependency4.from=StudentList
+dependency4.to=Student
+dependency4.type=UsesDependency
+editor.fx.0.height=745
+editor.fx.0.width=1235
+>>>>>>> 3be383cb7e979d684afb7b52a7fc5305c2188467
 editor.fx.0.x=0
 editor.fx.0.y=0
 objectbench.height=178
@@ -19,8 +55,14 @@ package.editor.x=530
 package.editor.y=23
 package.frame.height=745
 package.frame.width=836
+<<<<<<< HEAD
 package.numDependencies=2
 package.numTargets=4
+=======
+package.numDependencies=4
+>>>>>>> 3900b93b82c1f512e10cb9c327050165f105d392
+package.numTargets=3
+>>>>>>> 3be383cb7e979d684afb7b52a7fc5305c2188467
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
