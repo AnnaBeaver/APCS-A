@@ -1,49 +1,83 @@
-
+import java.util.*;
 public class Student
 {
-    StudentList studentList = new StudentList();
-    //Instance Variables
-    public static String firstName;
-    public static String middleName;
-    public static String lastName;
-    public static String fullName;
-    public static int studentNumber;
-    public static double gpa;
+    
+    ArrayList <Student> StudentInfo = new ArrayList<Student> (); 
+    
+    Scanner scanner = new Scanner(System.in);
+    String keyboard = scanner.nextLine();
+    
     //Constructor
     public Student(){
         
     }
     //Setters
-    //firstName, middleName, lastName, stuNumber, gpa
-    public void setFullName(String s){
-        firstName = s;
+    //firstName, middleName, lastName, fullName, studentNumber, gpa
+    public static void FullName(){
+        //getting the first name
+        System.out.println("What is the student's first name?");
+        Student.setFirstName();
+        
+        //getting the middle name
+        System.out.println("What is the student's middle name?");
+        System.out.println("space is an acceptable answer.");
+        Student.setMiddleName();
+
+        //getting the last name
+        System.out.println("What is the student's last name?");
+        Student.setLastName();
+        /*
+        Student.setFullName (StudentInfo.firstName, StudentInfo.middleName, StudentInfo.lastName);
+        System.out.println(StudentInfo.fullName);
+        */
     }
-    public void setMiddleName(String s){
-        middleName = s;
+    public static void setFirstName(){
+        //takes keyboard input
+        Scanner scanner2 = new Scanner(System.in);
+        String input2 = scanner2.nextLine();
+        //sets keyboard input to the student's first name
+        StudentInfo.firstName = input2;
+        System.out.println(firstName);
     }
-    public void setLastName(String s){
-        lastName = s;
+    public static void setMiddleName(){
+        //takes keyboard input
+        Scanner scanner3 = new Scanner(System.in);
+        String input3 = scanner3.nextLine();
+        middleName = input3;
+        System.out.println(middleName);
     }
-    public void setStuNumber(int s){
+    public static void setLastName(){
+        //takes keyboard input
+        Scanner scanner4 = new Scanner(System.in);
+        String input4 = scanner4.nextLine();
+        //sets keyboard input to the student's last name
+        
+        lastName = input4;
+        System.out.println(lastName);
+    }
+    public static void setFullName(String firstName, String middleName, String LastName){
+        fullName = firstName + middleName + lastName;
+    }
+    public static void setStuNumber(int s){
         studentNumber = s;
     }
-    public void setgpa(double s){
+    public static void setgpa(double s){
         gpa = s;
     }
     //Getters
-    public String getFirstName(){
+    public static String getFirstName(){
         return firstName;
     }
-    public String getMiddleName(){
+    public static String getMiddleName(){
         return middleName;
     }
-    public String getLastName(){
+    public static String getLastName(){
         return lastName;
     }
-    public int getStuNumber(){
+    public static int getStuNumber(){
         return studentNumber;
     }
-    public double getgpa(){
+    public static double getgpa(){
         return gpa;
     }
 }

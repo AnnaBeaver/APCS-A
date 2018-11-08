@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Class
+comment1.params=
+comment1.target=Class()
+comment2.params=
+comment2.target=void\ main()
+comment3.params=str
+comment3.target=java.lang.String\ TransformILike(java.lang.String)
+numComments=4
