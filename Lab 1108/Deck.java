@@ -25,23 +25,26 @@ public class Deck
     }
     
     public Card getCard(){
+        String ChosenSuit;
         Card.Rank = (int) Math.random()*13;
         int x = (int) Math.random()*4;
         if(x==1){
-                 Card.Suit = "Heart";
+                 ChosenSuit = "Heart";
                 }
         if(x==2){
-                 Card.Suit = "Diamond";
+                 ChosenSuit = "Diamond";
                 }
         if(x==3){
-                 Card.Suit = "Spade";
+                 ChosenSuit = "Spade";
                 }
         if(x==4){
-                 Card.Suit = "Club";
+                 ChosenSuit = "Club";
                 }
-        //Card ReturnCard = (card.Rank,card.Suit);
-        
-        return Card(card.Rank)(card.Suit);
+        if(Deck.card == x){
+            if(Deck.card == ChosenSuit){
+                return card;
+            }
+        }
     }
     
     
