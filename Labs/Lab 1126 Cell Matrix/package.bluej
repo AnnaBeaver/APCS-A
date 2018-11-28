@@ -1,9 +1,9 @@
 #BlueJ package file
-dependency1.from=CellMatrix
-dependency1.to=Cell
+dependency1.from=MatrixRunner
+dependency1.to=CellMatrix
 dependency1.type=UsesDependency
-dependency2.from=MatrixRunner
-dependency2.to=CellMatrix
+dependency2.from=CellMatrix
+dependency2.to=Cell
 dependency2.type=UsesDependency
 editor.fx.0.height=745
 editor.fx.0.width=936
