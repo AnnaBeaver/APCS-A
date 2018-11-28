@@ -2,10 +2,8 @@
 comment0.target=CellMatrix
 comment1.params=a\ b
 comment1.target=CellMatrix(int,\ int)
-comment1.text=\n\ Constructor\n
 comment2.params=
 comment2.target=void\ printMatrix()
-comment2.text=\n\ Methods\n
 comment3.params=
 comment3.target=void\ loadMatrix()
 comment4.params=cm2

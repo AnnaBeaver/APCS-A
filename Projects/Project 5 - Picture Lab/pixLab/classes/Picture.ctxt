@@ -1,9 +1,8 @@
 #BlueJ class context
 comment0.target=Picture
-comment0.text=\r\n\ A\ class\ that\ represents\ a\ picture.\ \ This\ class\ inherits\ from\ \r\n\ SimplePicture\ and\ allows\ the\ student\ to\ add\ functionality\ to\r\n\ the\ Picture\ class.\ \ \r\n\ \r\n\ @author\ Barbara\ Ericson\ ericson@cc.gatech.edu\r\n
+comment0.text=\r\n\ A\ class\ that\ represents\ a\ picture.\ \ This\ class\ inherits\ from\ \r\n\ SimplePicture\ and\ allows\ the\ student\ to\ add\ functionality\ to\r\n\ the\ Picture\ class.\ \ \r\n
 comment1.params=
 comment1.target=Picture()
-comment1.text=\r\n\ Constructor\ that\ takes\ no\ arguments\ \r\n
 comment10.params=fromPic\ startRow\ startCol
 comment10.target=void\ copy(Picture,\ int,\ int)
 comment10.text=\ copy\ from\ the\ passed\ fromPic\ to\ the\r\n\ specified\ startRow\ and\ startCol\ in\ the\r\n\ current\ picture\r\n\ @param\ fromPic\ the\ picture\ to\ copy\ from\r\n\ @param\ startRow\ the\ start\ row\ to\ copy\ to\r\n\ @param\ startCol\ the\ start\ col\ to\ copy\ to\r\n
