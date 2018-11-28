@@ -24,15 +24,6 @@ public class CellMatrix{
             System.out.println( );
         }
     }
-    //Print the sum for each of the cells
-    public void printSumMatrix(){
-        for(int a = 0; a < cells.length; a++){
-            for(int b = 0; b < cells[0].length; b++){
-                System.out.print(cells[a][b].getInt() + " ");
-            }
-            System.out.println( );
-        }
-    }
 
     //  load nums with random numbers between 1 and 10 inclusive
     public void loadMatrix(){
@@ -42,7 +33,8 @@ public class CellMatrix{
             }
         }
     }
-
+    
+    //loads the sum array so that each cell has the sum of it's neighbors in it
     public void loadSum(CellMatrix cm2){
         for(int a = 0; a < cells.length;a++){
             for(int b = 0; b < cells[0].length;b++){
@@ -64,6 +56,8 @@ public class CellMatrix{
         }
     }
     
+    //uses the sum array to check every spot and save the largest one
+    //as GN, which it then returns
     public int getGreatestNeighbors(){
         int GN = 0;
         int checkValue = 0;
