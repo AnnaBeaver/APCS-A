@@ -7,16 +7,14 @@ public class Cell
 {
     // instance variables - replace the example below with your own
     private int x;
-    public static Cell[] neighbors;
-    public static int sumInt;
+    //public static Cell[] neighbors;
+    //public static int sumInt;
 
     /**
      * Constructor for objects of class Cell
      */
     public Cell(int a)    {
         x = a;
-        neighbors = new Cell[4];// North, East, South, and West only 
-        
     }
 
     /**
@@ -24,5 +22,9 @@ public class Cell
      */
     public int getInt(){
         return x;
+    }
+    
+    public void setInt(int y){
+        x = y;
     }
 }
