@@ -28,6 +28,24 @@ public class PictureTester
     beach.explore();
   }
   
+  /** Method to test keepOnlyRed */
+  public static void testKeepOnlyRed()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyRed();
+    beach.explore();
+  }
+  
+  /** Method to test keepOnlyBlue */
+  public static void testKeepOnlyGreen()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyGreen();
+    beach.explore();
+  }
+  
   /** Method to test negate */
   public static void testNegate()
   {
@@ -59,6 +77,15 @@ public class PictureTester
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
+    caterpillar.explore();
+  }
+  
+  /** Method to test mirrorVertical */
+  public static void testMirrorRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorRightToLeft();
     caterpillar.explore();
   }
   
@@ -96,12 +123,13 @@ public class PictureTester
     // to run
     testZeroBlue();
     testKeepOnlyBlue();
-    //testKeepOnlyRed();
-    //testKeepOnlyGreen();
+    testKeepOnlyRed();
+    testKeepOnlyGreen();
     testNegate();
     testGreyscale();
     testFixUnderwater();
-    //testMirrorVertical();
+    testMirrorVertical();
+    testMirrorRightToLeft();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
