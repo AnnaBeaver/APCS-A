@@ -90,22 +90,54 @@ public class Picture extends SimplePicture {
     }
   }
   
-  /**Method to switch all values */
-  /*
+  /**Method to switch all values to their opposite */
+  
   public void negate(){
-    Pixel red = new Pixel();
     Pixel[][] pixels = this.getPixels2D();
     for (Pixel[] rowArray : pixels){
       for (Pixel pixelObj : rowArray){
-        int r = Pixel.getRed();
+        int r = pixelObj.getRed();
         pixelObj.setRed(255-r);
-         //int g = Pixel.getGreen();
-        //pixelObj.setGreen(255-g);
+        int g = pixelObj.getGreen();
+        pixelObj.setGreen(255-g);
+        int b = pixelObj.getBlue();
+        pixelObj.setBlue(255-b);
       }
     }
   }
   
-  */
+  /*** Method to make all values an appropirate shade of grey */
+  public void greyscale(){
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels){
+      for (Pixel pixelObj : rowArray){
+        int r = pixelObj.getRed();
+        int g = pixelObj.getGreen();
+        int b = pixelObj.getBlue();
+        int c = (r+g+b)/3;
+        pixelObj.setRed(c);
+        pixelObj.setGreen(c);
+        pixelObj.setBlue(c);
+      }
+    }
+  }
+ 
+  /*** Method to make the fish easier to see */
+  public void fixUnderwater(){
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels){
+      for (Pixel pixelObj : rowArray){
+        int b = pixelObj.getBlue();
+        int r = pixelObj.getRed();
+        if(b>100){
+          pixelObj.setBlue(b-70);  
+        }
+        if(r<23){
+          pixelObj.setRed(150);  
+        }
+      }
+    }
+  }
   
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
