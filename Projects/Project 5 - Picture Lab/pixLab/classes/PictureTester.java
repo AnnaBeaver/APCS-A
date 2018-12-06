@@ -85,7 +85,16 @@ public class PictureTester
   {
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
-    caterpillar.mirrorRightToLeft();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
+  
+  /** Method to test mirrorVertical */
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
     caterpillar.explore();
   }
   
@@ -98,11 +107,34 @@ public class PictureTester
     temple.explore();
   }
   
+  /** Method to test mirrorSnowman */
+  public static void testMirrorSnowman()
+  {
+    Picture temple = new Picture("snowman.jpg");
+    temple.explore();
+    temple.mirrorSnowman();
+    temple.explore();
+  }
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
     Picture canvas = new Picture("640x480.jpg");
     canvas.createCollage();
+    canvas.explore();
+  }
+  
+  public static void testCopy()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.createCollage();
+    canvas.explore();
+  }
+  
+  public static void testPartialCopy()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.createPartialCollage();
     canvas.explore();
   }
   
@@ -130,12 +162,13 @@ public class PictureTester
     testFixUnderwater();
     testMirrorVertical();
     testMirrorRightToLeft();
-    //testMirrorTemple();
-    //testMirrorArms();
+    testMirrorHorizontalBotToTop();
+    testMirrorTemple();
+    testMirrorSnowman();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
-    //testCopy();
+    testCollage();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
