@@ -306,13 +306,14 @@ public class Picture extends SimplePicture {
     * @param startRow the start row to copy to
     * @param startCol the start col to copy to
     */
-  public void PartialCopy(Picture fromPic, int startRow, int startCol, int endRow, int endCol){
+  
+  public void PartialCopy(Picture fromPic, int startRow, int endRow, int startCol, int endCol){
     Pixel fromPixel = null;
     Pixel toPixel = null;
     Pixel[][] toPixels = this.getPixels2D();
     Pixel[][] fromPixels = fromPic.getPixels2D();
-    for (int fromRow = 0, toRow = startRow; fromRow < endRow && toRow < endRow; fromRow++, toRow++){
-      for (int fromCol = 0, toCol = startCol; fromCol < endCol &&toCol < endCol;  fromCol++, toCol++){
+    for (int fromRow = 0, toRow = startRow; fromRow < fromPixels.length && toRow < endRow; fromRow++, toRow++){
+      for (int fromCol = 0, toCol = startCol; fromCol < fromPixels[0].length && toCol < endCol;  fromCol++, toCol++){
         fromPixel = fromPixels[fromRow][fromCol];
         //the line below this causes the problem
         toPixel = toPixels[toRow][toCol];
@@ -320,10 +321,11 @@ public class Picture extends SimplePicture {
       }
     }   
   }
+  
   /** Method to create a collage of several pictures */
   public void createPartialCollage(){
-    Picture flower1 = new Picture("flower1.jpg");
-    Picture flower2 = new Picture("flower2.jpg");
+    Picture flower1 = new Picture("arch.jpg");
+    Picture flower2 = new Picture("koala.jpg");
     this.PartialCopy(flower1,0,0, 10, 10);
     this.PartialCopy(flower2,100,0, 110, 10);
     this.PartialCopy(flower1,200,0, 210, 10);
@@ -354,6 +356,24 @@ public class Picture extends SimplePicture {
           leftPixel.setColor(Color.BLACK);
         else
           leftPixel.setColor(Color.WHITE);
+      }
+    }
+    
+    Pixel upPixel = null;
+    Pixel downPixel = null;
+    Pixel[][] vertpixels = this.getPixels2D();
+    Color downColor = null;
+    for (int row = 0; row < vertpixels.length-1; row++){
+      for (int col = 0; col < vertpixels[0].length; col++){
+        upPixel = vertpixels[row][col];
+        downPixel = vertpixels[row+1][col];
+        downColor = downPixel.getColor();
+        if (upPixel.colorDistance(downColor) > edgeDist){
+          upPixel.setColor(Color.BLACK);
+        }
+        else{
+          upPixel.setColor(Color.WHITE);
+        }
       }
     }
   }
