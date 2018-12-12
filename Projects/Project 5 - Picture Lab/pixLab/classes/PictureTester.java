@@ -124,6 +124,14 @@ public class PictureTester
     canvas.explore();
   }
   
+  
+  public static void testPartialCollage()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.createPartialCollage();
+    canvas.explore();
+  }
+  
   public static void testCopy()
   {
     Picture canvas = new Picture("640x480.jpg");
@@ -168,8 +176,9 @@ public class PictureTester
     //testMirrorGull();
     //testMirrorDiagonal();
     testCollage();
+    testPartialCollage();
     testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
