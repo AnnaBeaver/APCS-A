@@ -13,7 +13,7 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("panda.jpg");
+    Picture beach = new Picture("tower.jpg");
     beach.explore();
     beach.zeroBlue();
     beach.explore();
@@ -92,7 +92,7 @@ public class PictureTester
   /** Method to test mirrorVertical */
   public static void testMirrorHorizontalBotToTop()
   {
-    Picture caterpillar = new Picture("panda.jpg");
+    Picture caterpillar = new Picture("tower.jpg");
     caterpillar.explore();
     caterpillar.mirrorHorizontalBotToTop();
     caterpillar.explore();
@@ -149,8 +149,17 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("panda.jpg");
+    Picture swan = new Picture("tower.jpg");
     swan.edgeDetection(10);
+    swan.explore();
+  }
+  
+  /** Method to test edgeDetection */
+  public static void testTowerEdgeDetection()
+  {
+    Picture swan = new Picture("tower.jpg");
+    swan.explore();
+    swan.towerEdgeDetection(20);
     swan.explore();
   }
   
