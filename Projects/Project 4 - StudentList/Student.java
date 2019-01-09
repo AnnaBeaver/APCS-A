@@ -6,10 +6,19 @@ public class Student
     
     Scanner scanner = new Scanner(System.in);
     String keyboard = scanner.nextLine();
-    
+        static String firstName;
+        static String middleName;
+        static String lastName;
+        static String fullName;
+        static int studentNumber;
+        static double gpa;
     //Constructor
     public Student(){
-        
+        /*String firstName;
+        String middleName;
+        String lastName;
+        String fullName;
+        */
     }
     //Setters
     //firstName, middleName, lastName, fullName, studentNumber, gpa
@@ -36,15 +45,14 @@ public class Student
         Scanner scanner2 = new Scanner(System.in);
         String input2 = scanner2.nextLine();
         //sets keyboard input to the student's first name
-        StudentInfo.firstName = input2;
-        System.out.println(firstName);
+        Student.firstName = input2;
+        System.out.println(StudentList.firstName);
     }
     public static void setMiddleName(){
         //takes keyboard input
         Scanner scanner3 = new Scanner(System.in);
-        String input3 = scanner3.nextLine();
-        middleName = input3;
-        System.out.println(middleName);
+        Student.middleName = scanner3.nextLine();
+        System.out.println(StudentList.middleName);
     }
     public static void setLastName(){
         //takes keyboard input

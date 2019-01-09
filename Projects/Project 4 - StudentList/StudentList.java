@@ -5,10 +5,10 @@ public class StudentList
     String keyboard = scanner.nextLine();
     
     //makes the Array Lists for all the necesarry variables
-    static ArrayList <String> FirstName = new ArrayList <String>();
-    static ArrayList <String> MiddleName = new ArrayList <String>();
-    static ArrayList <String> LastName = new ArrayList <String>();
-    static ArrayList <Integer> StudentID = new ArrayList <Integer>();
+    static ArrayList <String> firstName = new ArrayList <String>();
+    static ArrayList <String> middleName = new ArrayList <String>();
+    static ArrayList <String> lastName = new ArrayList <String>();
+    static ArrayList <Integer> studentID = new ArrayList <Integer>();
     static ArrayList <Double> GPA = new ArrayList <Double>();
     
     ArrayList Students = new ArrayList();
@@ -21,12 +21,20 @@ public class StudentList
         Student.FullName();
     }
 
-    public static void deleteStudentFromList(){
-        System.out.println("Please enter name or Student ID of the student you would like to delete");
-        
+    public void deleteStudentFromList(){
+        System.out.println("Please enter the name of the student you would like to delete");
+        int nums = 0;
         //get input of the name or student ID of the kid to be deleted
         Scanner scanner2 = new Scanner(System.in);
         String input2 = scanner2.nextLine();
+        for(int i = 0; i<Students.size(); i++){
+            if(Student.firstName == input2){
+                nums = i;
+            }
+        }
+        if(nums == 0){
+            System.out.println("There is no student with that name");
+        }
         
         //print "Student [name] has been deleted"
         System.out.println("Student " + scanner2 + " has been deleted.");
