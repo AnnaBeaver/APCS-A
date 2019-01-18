@@ -1,10 +1,15 @@
 #BlueJ package file
 dependency1.from=StudListRunner
+<<<<<<< HEAD
 dependency1.to=Student
+=======
+dependency1.to=StudentList
+>>>>>>> 17eead8416f6b3d13ce586a21e1e08d78e90cda2
 dependency1.type=UsesDependency
-dependency2.from=StudentList
+dependency2.from=StudListRunner
 dependency2.to=Student
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency3.from=Student
 dependency3.to=StudentList
 dependency3.type=UsesDependency
@@ -24,6 +29,27 @@ package.frame.height=745
 package.frame.width=836
 package.numDependencies=3
 package.numTargets=4
+=======
+dependency3.from=StudentList
+dependency3.to=Student
+dependency3.type=UsesDependency
+editor.fx.0.height=722
+editor.fx.0.width=728
+editor.fx.0.x=638
+editor.fx.0.y=23
+objectbench.height=185
+objectbench.width=812
+package.divider.horizontal=0.6004901960784313
+package.divider.vertical=0.7205240174672489
+package.editor.height=488
+package.editor.width=710
+package.editor.x=524
+package.editor.y=23
+package.frame.height=745
+package.frame.width=836
+package.numDependencies=3
+package.numTargets=3
+>>>>>>> 17eead8416f6b3d13ce586a21e1e08d78e90cda2
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -33,23 +59,24 @@ readme.width=47
 readme.x=10
 readme.y=10
 target1.height=50
-target1.name=StudentInfo
+target1.name=StudentList
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=100
-target1.x=70
-target1.y=10
+target1.x=190
+target1.y=230
 target2.height=50
-target2.name=StudentList
+target2.name=StudListRunner
 target2.showInterface=false
 target2.type=ClassTarget
-target2.width=100
-target2.x=420
-target2.y=130
+target2.width=120
+target2.x=240
+target2.y=20
 target3.height=50
-target3.name=StudListRunner
+target3.name=Student
 target3.showInterface=false
 target3.type=ClassTarget
+<<<<<<< HEAD
 target3.width=120
 target3.x=320
 target3.y=20
@@ -60,3 +87,8 @@ target4.type=ClassTarget
 target4.width=80
 target4.x=70
 target4.y=70
+=======
+target3.width=80
+target3.x=460
+target3.y=130
+>>>>>>> 17eead8416f6b3d13ce586a21e1e08d78e90cda2

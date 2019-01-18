@@ -1,62 +1,52 @@
-import java.util.*;
-public class StudListRunner
+import java.util.Scanner;
+import java.util.ArrayList;
+public class StudListRunner 
 {
-    //making a student list object
-    //Student student = new Student();
-    //int i = 0;
-    Scanner scanner = new Scanner(System.in);
-    String keyboard = scanner.nextLine();
-    
-    public static void setMenu(){
-        //selection is the variable that holds what number the person wants
-        String selection = "0";
-        while (!selection.equals("7")){
-            //Menu
-            System.out.println(" ");
-            System.out.println("1.) add Student to List");
-            System.out.println("2.) Delete Student from List");
-            System.out.println("3.) Edit Student List");
-            System.out.println("4.) Clear List");
-            System.out.println("5.) Print List");
-            System.out.println("6.) Print Student Profile");
-            System.out.println("7.) Quit Menu");
-            System.out.print("Please type one of the numbers ");
-
-            //Takes data from the keyboard and sets it equal to string scanner
-            //this scanner is for the variable selection, and should hold a number between 1 and 7
-            Scanner scanner = new Scanner(System.in);
-            String input = scanner.nextLine();
-            selection = input;
-
-            //checks for each of the appropriate values, otherwise returns an error
-            if (selection.equals("1")){
-                StudentList.addStudent();
+    public static void main(){
+        StudentList studentListObject = new StudentList(); //this creates a new object to work with
+        Student student = new Student("p", 7, 0.00); //this creats a new student object to work with
+        int loopEnd = 1;
+        Scanner in = new Scanner(System.in); //this creates a scanner to check which number people enter
+        while(loopEnd != 0){
+            System.out.println("\n");
+            System.out.println("Welcome to my StudentList Project");
+            System.out.println("To add a student, enter 1");
+            System.out.println("To delete a student, enter 2");
+            System.out.println("To edit the StudentList, enter 3");
+            System.out.println("To clear the list, enter 4");
+            System.out.println("To print the list, enter 5");
+            System.out.println("To print a Student, enter 6");
+            System.out.println("To filter the list, enter 7");
+            System.out.println("To exit this program, enter 0");
+            int input = studentListObject.menuNumber(); //this sets a variable equal to the number the user inputs
+            if(input == 0){ //these if statements all check for what number the user inputs, and then does the requested method
+                loopEnd = 0;
             }
-
-            else if(selection.equals("2")){
-                StudentList.deleteStudentFromList();
+            if(input ==1){
+                System.out.println("Please enter the name of the student you wish to add");
+                String name = in.nextLine();
+                int num = student.getstuNumber();
+                double GPA = student.getGPA();
+                studentListObject.addStudenttoList(name,num, GPA);
             }
-            else if (selection.equals("3")){
-                StudentList.editStudentList();
+            if(input == 2){
+                System.out.print(studentListObject.deleteStudent());
             }
-            else if (selection.equals("4")){ 
-                StudentList.clearList(input);
+            if(input == 3){
+                System.out.print(studentListObject.editStudentList());
             }
-            else if (selection.equals("5")){
-                StudentList.printStudentList();
+            if(input == 4){
+                System.out.print(studentListObject.clearList());
             }
-            else if (selection.equals("6")){
-                //StudentList.printStudent();
+            if(input == 5){
+                System.out.print(studentListObject.printList());
             }
-            else if (selection.equals("7")){
-                //Exit
+            if(input == 6){
+                System.out.print(studentListObject.printStudent());
             }
-
-            else{
-                System.out.println("Not a valid input. Please try again");
+            if(input == 7){
+                System.out.print(studentListObject.filterStudentSearch());
             }
-            System.out.println("Done");
         }
     }
-}
-
+} 

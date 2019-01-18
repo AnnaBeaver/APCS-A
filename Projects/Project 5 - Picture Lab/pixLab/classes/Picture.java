@@ -347,6 +347,7 @@ public class Picture extends SimplePicture {
     Pixel rightPixel = null;
     Pixel[][] pixels = this.getPixels2D();
     Color rightColor = null;
+    
     for (int row = 0; row < pixels.length; row++){
       for (int col = 0; col < pixels[0].length-1; col++){
         leftPixel = pixels[row][col];
@@ -369,6 +370,42 @@ public class Picture extends SimplePicture {
         downPixel = vertpixels[row+1][col];
         downColor = downPixel.getColor();
         if (upPixel.colorDistance(downColor) > edgeDist){
+          upPixel.setColor(Color.BLACK);
+        }
+        else{
+          upPixel.setColor(Color.WHITE);
+        }
+      }
+    }
+  }
+  
+    public void towerEdgeDetection(int edgeDist){
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    Pixel[][] pixels = this.getPixels2D();
+    int rightColor = 0;
+    for (int row = 0; row < pixels.length; row++){
+      for (int col = 0; col < pixels[0].length-1; col++){
+        leftPixel = pixels[row][col];
+        rightPixel = pixels[row][col+1];
+        rightColor = rightPixel.getBlue();
+        if (leftPixel.getBlue() > 150 )
+          leftPixel.setColor(Color.BLACK);
+        else
+          leftPixel.setColor(Color.WHITE);
+      }
+    }
+    
+    Pixel upPixel = null;
+    Pixel downPixel = null;
+    Pixel[][] vertpixels = this.getPixels2D();
+    int downColor = 0;
+    for (int row = 0; row < vertpixels.length-1; row++){
+      for (int col = 0; col < vertpixels[0].length; col++){
+        upPixel = vertpixels[row][col];
+        downPixel = vertpixels[row+1][col];
+        downColor = downPixel.getBlue();
+        if (upPixel.getBlue() > 150){
           upPixel.setColor(Color.BLACK);
         }
         else{
